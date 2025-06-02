@@ -1,1 +1,0 @@
-memberSearchIndex = [{"p":"com.example.demo.repository","c":"ReviewRepositoryImpl","l":"add(Review)","u":"add(com.example.demo.entity.Review)"},{"p":"com.example.demo.repository","c":"ReviewRepositoryImpl","l":"ReviewRepositoryImpl()","u":"%3Cinit%3E()"}];updateSearchResults();
