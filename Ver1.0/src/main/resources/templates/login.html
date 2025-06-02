@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>ログイン</title>
+	<link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+</html xmlns="http://www.w3.org/1999/xhtml">
+
+<h1>ログイン画面</h1>
+
+<h2>ログイン情報を入力してください</h2>
+
+<form th:action="@{/login}" method="POST">
+	<div><label> 【ユーザ名】 : <input type="text" name="username" /> </label></div>
+	<div><label> 【パスワード】: <input type="password" name="password" /> </label></div>
+	<div><input type="submit" value="ログイン" /></div>
+
+	<a th:href="@{/show-torareco}"><button type="button">戻る</button></a>
+
+	</body>
+
+	</html>

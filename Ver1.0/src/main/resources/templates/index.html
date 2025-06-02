@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <!-- タイムリーフをインポート -->
+  <html xmlns:th="http://www.thymeleaf.org"></html>
+ 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSSをインポート -->
+    <link rel="stylesheet" href="../static/css/index.css" />
+
+    <!-- タイトル -->
+    <title>トレード日記</title>
+  </head>
+  
+  <body>
+    <h1>トレード日記</h1>
+
+    <!-- /regist-confirmにPOSTで送信する -->
+    <form action="@{/regist-confirm}" method="POST">
+    
+      <div class = "common">
+        日付:
+        <input type="date" th:field="*{date}" />
+        トレード時間帯:
+        <input type="time" th:field="*{time_zone}" />
+        通貨ペア:
+        <input type="text" th:field="*{currency}" />
+      </div>
+
+      <!-- 環境認識 -->
+      <div class = "env">
+        <h2>環境認識</h2>
+        環境認識画像アップロード:<br />
+        <input type="text" th:field="*{env_photo}" /><br />
+        時間足:<br />
+        <input type="text" th:field="*{env_timeframe}" /><br />
+        環境認識メモ:<br />
+        <input type="text" th:field="*{env_memo}" /><br />
+      </div>
+    
+      <!-- エントリー -->
+      <div class = "entry">
+        <h2>エントリー</h2>
+        エントリー画像アップロード:<br />
+        <input type="text" th:field="*{entry_photo}" /><br />
+        ロット数:<br />
+        <input type="text" th:field="*{lot}" /><br />
+        エントリー価格:<br />
+        <input type="text" th:field="*{entry_price}" /><br />
+        売買区分:<br />
+        <input type="text" th:field="*{category}" /><br />
+        損切価格:<br />
+        <input type="text" th:field="*{sl}" /><br />
+        決済価格: <br />
+        <input type="text" th:field="*{tp}" /><br />
+        エントリー根拠:<br />
+        <input type="text" th:field="*{entry_memo}" /><br />
+      </div>
+
+      <!-- 決済 -->
+      <div class = "take_profit">
+        <h2>決済</h2>
+        決済画像アップロード:<br />
+        <input type="text" th:field="*{tp_photo}" /><br />
+        決済価格:<br />
+        <input type="text" th:field="*{tp_price}" /><br />
+        損益/pips:<br />
+        <input type="text" th:field="*{pips}" /><br />
+        損益/￥:<br />
+        <input type="text" th:field="*{pl}" /><br />
+        決済の根拠:<br />
+        <input type="text" th:field="*{tp_memo}" /><br />
+      </div>
+      
+      <!-- 登録ボタン -->
+      <div class = "btn">
+        <input type="submit" value="登録" class="regist" /><br />
+      </div> 
+
+    </form>
+  </body>
+</html>
